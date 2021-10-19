@@ -2,6 +2,8 @@
   color: white;
   object-fit: contain;
   height: 500px;
+  background-size: cover;
+  background-position: center center;
 }
 
 .banner__contents {
