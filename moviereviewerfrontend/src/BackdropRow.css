@@ -3,18 +3,18 @@
   margin-left: 20px;
 }
 
-.row__posters {
+.all__row__backdrops {
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
   padding: 20px;
 }
 
-.row__posters::-webkit-scrollbar {
+.all__row__backdrops::-webkit-scrollbar {
   display: none;
 }
 
-.row__poster {
+.row__backdrop {
   object-fit: contain;
   width: 100%;
   max-height: 150px;
@@ -23,14 +23,6 @@
   border-radius: 5px;
 }
 
-.row__poster:hover {
+.row__backdrop:hover {
   transform: scale(1.1);
-}
-
-.row__posterLarge {
-  max-height: 300px;
-}
-
-.row__posterLarge:hover {
-  transform: scale(1.2);
 }

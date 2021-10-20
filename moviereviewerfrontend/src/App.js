@@ -1,18 +1,33 @@
 import Banner from "./Banner";
 import requests from "./requests";
-import Row from "./Row";
+import PosterRow from "./PosterRow";
+import BackdropRow from "./BackdropRow";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <Banner />
-      <Row
+
+      <PosterRow
         title="Netflix Originals"
         fetchUrl={requests.fetchNetflixOriginals}
-        isLargeRow={true}
       />
-      <Row title="Trending now" fetchUrl={requests.fetchTrending} />
+
+      <BackdropRow title="Comedy" fetchUrl={requests.fetchComedy} />
+
+      <BackdropRow title="Action" fetchUrl={requests.fetchAction} />
+
+      <BackdropRow title="Drama" fetchUrl={requests.fetchDrama} />
+
+      <PosterRow title="Thriller" fetchUrl={requests.fetchThriller} />
+
+      <BackdropRow title="Adventure" fetchUrl={requests.fetchAdventure} />
+
+      <BackdropRow
+        title="Science Fiction"
+        fetchUrl={requests.fetchScienceFiction}
+      />
     </div>
   );
 }
