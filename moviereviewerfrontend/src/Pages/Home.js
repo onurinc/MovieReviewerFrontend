@@ -1,13 +1,13 @@
 import Banner from "../Banner";
 import requests from "../requests";
 import BackdropRow from "../BackdropRow";
-import Nav from "../Components/Nav";
+import NavMenu from "../Components/NavMenu";
 import "./Styling/Home.css";
 
 function Home() {
   return (
     <div className="Home">
-      <Nav />
+      <NavMenu />
       <Banner />
 
       <BackdropRow title="Comedy" fetchUrl={requests.fetchComedy} />

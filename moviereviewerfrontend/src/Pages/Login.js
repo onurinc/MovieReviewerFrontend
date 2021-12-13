@@ -1,5 +1,5 @@
 import React from "react";
-import "./Styling/Login.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Login() {
   return (
