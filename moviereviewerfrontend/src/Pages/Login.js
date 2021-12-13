@@ -1,28 +1,31 @@
 import React from "react";
 import NavMenu from "../Components/NavMenu";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Form, Button } from "react-bootstrap";
+import "./Styling/Login.css";
 
 function Login() {
   return (
     <>
       <NavMenu />
-      <form>
-        <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
-        <input
-          type="email"
-          className="form-control"
-          placeholder="Email address"
-          required
-        />
-        <input
-          type="password"
-          className="form-control"
-          placeholder="Password"
-          required
-        />
-        <button className="w-100 btn btn-lg btn-primary" type="submit">
-          Sign in
-        </button>
-      </form>
+      <Form>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control type="email" placeholder="Enter email" />
+          <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+          </Form.Text>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control type="password" placeholder="Password" />
+        </Form.Group>
+
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
     </>
   );
 }

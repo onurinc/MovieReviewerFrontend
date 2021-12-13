@@ -8,7 +8,7 @@ function NavMenu() {
       <Container>
         <Navbar.Brand href="">MovieReviewer</Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link href="">Home</Nav.Link>
+          <Nav.Link href="/">Home</Nav.Link>
         </Nav>
         <Nav>
           <Nav.Link href="login">Login</Nav.Link>

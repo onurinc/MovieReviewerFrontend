@@ -1,7 +1,11 @@
-* {
-  margin: 0;
+body {
+  color: black;
 }
 
-.App {
-  background-color: #232f34;
+h1 {
+  color: black;
+}
+
+div {
+  color: black;
 }
