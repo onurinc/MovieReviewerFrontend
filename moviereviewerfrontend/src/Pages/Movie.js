@@ -13,7 +13,7 @@ function Movie() {
   const getMovie = () => {
     axios
       .get(
-        `/movie/${id}?api_key=2c4e627dfa7f8e9e95eaeda275c7925a&language=en-US`
+        `https://api.themoviedb.org/3/movie/${id}?api_key=2c4e627dfa7f8e9e95eaeda275c7925a&language=en-US`
       )
       .then((response) => {
         SetMovie(response.data);
