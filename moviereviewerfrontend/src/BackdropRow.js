@@ -16,12 +16,17 @@ function Row({ title, fetchUrl }) {
     fetchData();
   }, [fetchUrl]);
 
+  const imageClick = (props) => {
+    window.location.href = "/movie/" + props;
+  };
+
   return (
     <div className="row">
       <h2>{title}</h2>
       <div className="all__row__backdrops">
         {movies.map((movie) => (
           <img
+            onClick={() => imageClick(movie.id)}
             key={movie.id}
             className={`row__backdrop `}
             src={`${base_url}${movie.backdrop_path}`}
