@@ -30,7 +30,7 @@ function Register() {
       //Then with the data from the response in JSON...
       .then((data) => {
         console.log("Success:", data);
-        localStorage.setItem("token", data.token);
+        localStorage.setItem("token", data.result.token);
         localStorage.setItem("loggedIn", "true");
         window.location = "/";
       })

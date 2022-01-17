@@ -37,7 +37,7 @@ function Movie() {
   return (
     <>
       <NavMenu />
-      <h1>{movie.original_title}</h1>
+      <h1>Movie title: {movie.original_title}</h1>
       <div>Description: {movie.overview}</div>
       <div>Movie homepage: {movie.homepage}</div>
       <img
