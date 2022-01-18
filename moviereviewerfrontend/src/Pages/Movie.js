@@ -10,6 +10,7 @@ function Movie() {
   const base_url = "https://image.tmdb.org/t/p/original/";
   const [movie, SetMovie] = useState("");
 
+  const [reviews, SetReviews] = useState([]);
   const [comments, SetComments] = useState([]);
   const [body, setBody] = useState("");
   const getComments = () => {
@@ -22,8 +23,19 @@ function Movie() {
       .catch((error) => console.error("Error: ${error}"));
   };
 
+  const getReviews = () => {
+    axios
+      .get(`https://localhost:4443/api/Reviews/movieid/${id}`)
+      .then((response) => {
+        SetReviews(response.data);
+        console.log(response);
+      })
+      .catch((error) => console.error("Error: ${error}"));
+  };
+
   useEffect(() => {
     console.log(id);
+    getReviews();
     getComments();
   }, []);
 
@@ -138,6 +150,30 @@ function Movie() {
 
         <Card className="col-sm-4">
           <Card.Header style={{ fontSize: 32 }}>Reviews</Card.Header>
+          <Card.Body>
+            <div>
+              {reviews.length ? (
+                reviews.map((review) => (
+                  <div
+                    key={review.id}
+                    className="row rounded m-2 p-2"
+                    style={{ backgroundColor: "#262626" }}
+                  >
+                    <div className="col-12">User: {review.userId}</div>
+                    <div className="col-12">{review.body}</div>
+                    <div className="col-12">Rating: {review.rating}</div>
+                  </div>
+                ))
+              ) : (
+                <>
+                  <h3>
+                    there are no reviews yet, be the first one to write a
+                    comment!
+                  </h3>
+                </>
+              )}
+            </div>
+          </Card.Body>
 
           <Button
             className="float-right"

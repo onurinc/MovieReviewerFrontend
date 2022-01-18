@@ -30,6 +30,7 @@ function Actors() {
     <>
       <NavMenu />
       <h1 style={{ textAlign: "center" }}>Top 20 Actors</h1>
+      <h2 style={{ textAlign: "center" }}>sorted by popularity</h2>
       {console.log(people)}
       <div className="d-flex flex-wrap container">
         {people.map((p) => (
