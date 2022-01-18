@@ -11,7 +11,7 @@ function Login() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    fetch("https://localhost:44318/api/Accounts/Login", {
+    fetch("https://localhost:4443/api/Accounts/Login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -22,7 +22,7 @@ function Login() {
       //Then with the data from the response in JSON...
       .then((data) => {
         console.log("Success:", data);
-        localStorage.setItem("token", data.token);
+        localStorage.setItem("token", data.result.token);
         localStorage.setItem("loggedIn", "true");
         window.location = "/";
       })

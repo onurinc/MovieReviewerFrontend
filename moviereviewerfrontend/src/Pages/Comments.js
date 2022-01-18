@@ -31,9 +31,9 @@ function Comments() {
       <NavMenu />
       <h1>Comments</h1>
       <ul>
-        {comments.map((comment) => (
+        {comments?comments.map((comment) => (
           <li key={comment.id}>{comment.body}</li>
-        ))}
+        )):<><li>There are no comments yet</li></>}
       </ul>
     </>
   );

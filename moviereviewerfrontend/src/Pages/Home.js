@@ -8,7 +8,7 @@ function Home() {
   return (
     <div className="Home">
       <NavMenu />
-      <Banner />
+      {/* <Banner /> */}
 
       <BackdropRow title="Comedy" fetchUrl={requests.fetchComedy} />
 
