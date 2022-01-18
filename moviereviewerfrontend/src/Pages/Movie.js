@@ -58,7 +58,9 @@ function Movie() {
       <NavMenu />
       <div className="row">
         <Card className="col-sm-7">
-          <Card.Header style={{ fontSize: 32 }}>{movie.original_title}</Card.Header>
+          <Card.Header style={{ fontSize: 32 }}>
+            {movie.original_title}
+          </Card.Header>
           <Card.Body>
             <h2>Movie title </h2>
             <p>{movie.original_title}</p>
@@ -73,14 +75,18 @@ function Movie() {
             <h2>Vote average</h2>
             <p>{movie.vote_average}</p>
             <h2>Movie homepage</h2>
-            <a href={movie.homepage} target={"_blank"}>{movie.homepage}</a>
+            <a href={movie.homepage} target={"_blank"}>
+              {movie.homepage}
+            </a>
           </Card.Body>
         </Card>
 
-
-        <Card className="col-sm-3"  >
+        <Card className="col-sm-3">
           <Card.Header style={{ fontSize: 32 }}>Movie poster</Card.Header>
-          <Card.Img style={{ padding: "10px",  borderRadius: "50px" }} src={`${base_url}${movie.poster_path}`} />
+          <Card.Img
+            style={{ padding: "10px", borderRadius: "50px" }}
+            src={`${base_url}${movie.poster_path}`}
+          />
 
           {/* <img
         className="poster_main"
@@ -96,35 +102,45 @@ function Movie() {
           <Card.Header style={{ fontSize: 32 }}>Comments</Card.Header>
           <Card.Body>
             <div>
-              {comments.length?comments.map((comment) => (
-                <div key={comment.id} className="row rounded m-2 p-2" style={{backgroundColor: "#262626"}}>
-                  <div className="col-12">User: {comment.userId}</div>
-                  <div className="col-12">
-                    {comment.body}
+              {comments.length ? (
+                comments.map((comment) => (
+                  <div
+                    key={comment.id}
+                    className="row rounded m-2 p-2"
+                    style={{ backgroundColor: "#262626" }}
+                  >
+                    <div className="col-12">User: {comment.userId}</div>
+                    <div className="col-12">{comment.body}</div>
                   </div>
-                </div>
-              )):<><h3>there are no comments yet, be the first one to write a comment!</h3></>}
+                ))
+              ) : (
+                <>
+                  <h3>
+                    there are no comments yet, be the first one to write a
+                    comment!
+                  </h3>
+                </>
+              )}
             </div>
           </Card.Body>
 
           <Card.Footer className="text-muted">
-
-          <Button
-            className = "btn-block"
+            <Button
+              className="btn-block"
               variant="primary"
               type="submit"
               onClick={() => onClickComment(movie.id)}
             >
-              Comments
+              Post comment
             </Button>
           </Card.Footer>
         </Card>
 
-
-        <Card className="col-sm-4"  >
+        <Card className="col-sm-4">
           <Card.Header style={{ fontSize: 32 }}>Reviews</Card.Header>
 
-          <Button className = "float-right"
+          <Button
+            className="float-right"
             variant="primary"
             type="submit"
             onClick={() => onClickReview(movie.id)}
@@ -133,7 +149,6 @@ function Movie() {
           </Button>
         </Card>
       </div>
-
     </>
   );
 }

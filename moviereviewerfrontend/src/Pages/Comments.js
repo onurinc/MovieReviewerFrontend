@@ -6,35 +6,51 @@ import { Form, Button } from "react-bootstrap";
 import "./Styling/Comments.css";
 
 function Comments() {
+  axios.interceptors.request.use(
+    (config) => {
+      const token = window.localStorage.getItem("token");
+      if (token) config.headers.Authorization = `Bearer ${token}`;
+      return config;
+    },
+    (error) => {
+      return Promise.reject(error);
+    }
+  );
+
   const { id } = useParams();
-  const [comments, SetComments] = useState([]);
-  const [body, setBody] = useState("");
-  const getComments = () => {
-    axios
-      .get(`https://localhost:4443/api/Comments/movieid/${id}`)
-      .then((response) => {
-        SetComments(response.data);
-        console.log(response);
-      })
-      .catch((error) => console.error("Error: ${error}"));
-  };
-
-  useEffect(() => {
-    console.log(id);
-    getComments();
-  }, []);
-
+  const [body, setBody] = useState({});
   const data = { movieId: id, body: body };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    axios
+      .post("https://localhost:4443/api/Comments/", { ...data })
+      .then(function (response) {
+        console.log(response);
+      });
+  };
 
   return (
     <>
       <NavMenu />
-      <h1>Comments</h1>
-      <ul>
-        {comments?comments.map((comment) => (
-          <li key={comment.id}>{comment.body}</li>
-        )):<><li>There are no comments yet</li></>}
-      </ul>
+      <Form>
+        <Form.Group className="mb-3" controlId="formBasic">
+          <Form.Label>Comment</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter comment"
+            onChange={(e) => setBody(e.target.value)}
+          />
+          <Form.Text className="text-muted">
+            If you want to elaborate more about the movie, feel free to leave a
+            review!
+          </Form.Text>
+        </Form.Group>
+
+        <Button variant="primary" type="submit" onClick={submitHandler}>
+          Submit
+        </Button>
+      </Form>
     </>
   );
 }

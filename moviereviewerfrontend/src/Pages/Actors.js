@@ -26,30 +26,35 @@ function Actors() {
     getPeople();
   }, []);
 
-
   return (
     <>
-
       <NavMenu />
-
+      <h1 style={{ textAlign: "center" }}>Top 20 Actors</h1>
       {console.log(people)}
       <div className="d-flex flex-wrap container">
-
-        {people.map(p => (
-
-          <div className="rounded" style={{ backgroundColor: "#262626", margin: "10px", padding: "10px", maxWidth: "14rem", border: "10px" }}>
-            <h3 style={{ fontSize: 22 }} >{p.name}</h3>
-            <img style={{ padding: "10px", width: "12rem", height: "auto" }} src={`${base_url}${p.profile_path}`} />
-            <p>known for:</p>
+        {people.map((p) => (
+          <div
+            className="rounded"
+            style={{
+              backgroundColor: "#262626",
+              margin: "10px",
+              padding: "10px",
+              maxWidth: "14rem",
+              border: "10px",
+            }}
+          >
+            <h3 style={{ fontSize: 22 }}>{p.name}</h3>
+            <img
+              style={{ padding: "10px", width: "12rem", height: "auto" }}
+              src={`${base_url}${p.profile_path}`}
+            />
+            <p>Known for:</p>
             <ul>
-              {p.known_for.map(k => (
-                <li>{k.original_title
-                || k.original_name}</li>
+              {p.known_for.map((k) => (
+                <li>{k.original_title || k.original_name}</li>
               ))}
             </ul>
-
           </div>
-
         ))}
       </div>
     </>
