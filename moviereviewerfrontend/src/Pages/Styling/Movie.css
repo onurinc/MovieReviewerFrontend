@@ -1,6 +1,15 @@
 .poster_main {
-  max-height: 800px;
+  max-height: 400px;
   position: absolute;
   top: 60px;
   right: 16px;
 }
+
+.card {
+  margin: 20px;
+background-color: #666666;
+display:inline-block;
+min-height: 500px;
+min-width: 500px;
+}
+

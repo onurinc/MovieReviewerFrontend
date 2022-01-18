@@ -3,6 +3,7 @@ import Home from "./Pages/Home";
 import Movie from "./Pages/Movie";
 import Register from "./Pages/Register";
 import Comments from "./Pages/Comments";
+import Actors from "./Pages/Actors";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -21,6 +22,9 @@ function App() {
               </Route>
               <Route exact path="/register">
                 <Register />
+              </Route>
+              <Route exact path="/actors">
+                <Actors />
               </Route>
               <Route exact path="/movie/:id">
                 <Movie />
