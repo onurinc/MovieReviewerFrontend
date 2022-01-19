@@ -7,7 +7,7 @@ it("clicking home page nav bar", function () {
   /* ==== End Cypress Studio ==== */
 });
 
-it("clicking home page nav bar", function () {
+it("clicking actor page nav bar", function () {
   /* ==== Generated with Cypress Studio ==== */
   cy.visit("http://localhost:3000/");
   /* ==== End Cypress Studio ==== */
@@ -16,7 +16,7 @@ it("clicking home page nav bar", function () {
   /* ==== End Cypress Studio ==== */
 });
 
-it("clicking home page nav bar", function () {
+it("clicking login page nav bar", function () {
   /* ==== Generated with Cypress Studio ==== */
   cy.visit("http://localhost:3000/");
   /* ==== End Cypress Studio ==== */
@@ -25,7 +25,7 @@ it("clicking home page nav bar", function () {
   /* ==== End Cypress Studio ==== */
 });
 
-it("clicking home page nav bar", function () {
+it("clicking register page nav bar", function () {
   /* ==== Generated with Cypress Studio ==== */
   cy.visit("http://localhost:3000/");
   /* ==== End Cypress Studio ==== */
