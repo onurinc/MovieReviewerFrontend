@@ -46,13 +46,22 @@ function Actors() {
           >
             <h3 style={{ fontSize: 22 }}>{p.name}</h3>
             <img
-              style={{ padding: "10px", width: "12rem", height: "auto" }}
+              style={{
+                padding: "10px",
+                width: "12rem",
+                height: "auto",
+                borderRadius: "20px",
+              }}
               src={`${base_url}${p.profile_path}`}
             />
             <p>Known for:</p>
             <ul>
               {p.known_for.map((k) => (
-                <li>{k.original_title || k.original_name}</li>
+                <li>
+                  <a style={{ color: "white" }} href={`/movie/${k.id}`}>
+                    {k.original_title || k.original_name}
+                  </a>
+                </li>
               ))}
             </ul>
           </div>

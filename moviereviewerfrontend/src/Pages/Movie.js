@@ -174,15 +174,16 @@ function Movie() {
               )}
             </div>
           </Card.Body>
-
-          <Button
-            className="float-right"
-            variant="primary"
-            type="submit"
-            onClick={() => onClickReview(movie.id)}
-          >
-            Reviews
-          </Button>
+          <Card.Footer className="text-muted">
+            <Button
+              className="float-right"
+              variant="primary"
+              type="submit"
+              onClick={() => onClickReview(movie.id)}
+            >
+              Reviews
+            </Button>
+          </Card.Footer>
         </Card>
       </div>
     </>
