@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/moviereviewerfrontend/static/css/main.6a8a7052.chunk.css",
+    "main.js": "/moviereviewerfrontend/static/js/main.d1388675.chunk.js",
+    "main.js.map": "/moviereviewerfrontend/static/js/main.d1388675.chunk.js.map",
+    "runtime-main.js": "/moviereviewerfrontend/static/js/runtime-main.d766fb4f.js",
+    "runtime-main.js.map": "/moviereviewerfrontend/static/js/runtime-main.d766fb4f.js.map",
+    "static/css/2.0a9ec390.chunk.css": "/moviereviewerfrontend/static/css/2.0a9ec390.chunk.css",
+    "static/js/2.2c26b860.chunk.js": "/moviereviewerfrontend/static/js/2.2c26b860.chunk.js",
+    "static/js/2.2c26b860.chunk.js.map": "/moviereviewerfrontend/static/js/2.2c26b860.chunk.js.map",
+    "static/js/3.16ad8f4a.chunk.js": "/moviereviewerfrontend/static/js/3.16ad8f4a.chunk.js",
+    "static/js/3.16ad8f4a.chunk.js.map": "/moviereviewerfrontend/static/js/3.16ad8f4a.chunk.js.map",
+    "index.html": "/moviereviewerfrontend/index.html",
+    "static/css/2.0a9ec390.chunk.css.map": "/moviereviewerfrontend/static/css/2.0a9ec390.chunk.css.map",
+    "static/css/main.6a8a7052.chunk.css.map": "/moviereviewerfrontend/static/css/main.6a8a7052.chunk.css.map",
+    "static/js/2.2c26b860.chunk.js.LICENSE.txt": "/moviereviewerfrontend/static/js/2.2c26b860.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d766fb4f.js",
+    "static/css/2.0a9ec390.chunk.css",
+    "static/js/2.2c26b860.chunk.js",
+    "static/css/main.6a8a7052.chunk.css",
+    "static/js/main.d1388675.chunk.js"
+  ]
+}
