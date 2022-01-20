@@ -8,6 +8,7 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const data = { email: email, password: password };
+  const [show, setShow] = useState(false);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -28,6 +29,7 @@ function Login() {
       })
       //Then with the error genereted...
       .catch((error) => {
+        setShow(true);
         console.error("Error:", error);
       });
   };
