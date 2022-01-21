@@ -28,6 +28,7 @@ function Reviews() {
       .post("https://localhost:4443/api/Reviews/", { ...data })
       .then(function (response) {
         console.log(response);
+        window.location.href = "/movie/" + id;
       });
   };
 
