@@ -25,7 +25,7 @@ function NavMenu() {
             </>
           ) : (
             <>
-              <Nav.Link onClick={logOut} href="login">
+              <Nav.Link onClick={logOut} href="/login">
                 LogOut
               </Nav.Link>
             </>

@@ -121,8 +121,8 @@ function Movie() {
                     className="row rounded m-2 p-2"
                     style={{ backgroundColor: "#262626" }}
                   >
-                    <div className="col-12">User: {comment.userId}</div>
                     <div className="col-12">{comment.body}</div>
+                    <div className="col-12">User: {comment.userId}</div>
                   </div>
                 ))
               ) : (
@@ -159,9 +159,9 @@ function Movie() {
                     className="row rounded m-2 p-2"
                     style={{ backgroundColor: "#262626" }}
                   >
-                    <div className="col-12">User: {review.userId}</div>
                     <div className="col-12">{review.body}</div>
                     <div className="col-12">Rating: {review.rating}</div>
+                    <div className="col-12">User: {review.userId}</div>
                   </div>
                 ))
               ) : (

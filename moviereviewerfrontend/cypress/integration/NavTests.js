@@ -3,7 +3,9 @@ it("clicking home page nav bar", function () {
   cy.visit("http://localhost:3000/");
   /* ==== End Cypress Studio ==== */
   /* ==== Generated with Cypress Studio ==== */
-  cy.get('[href="/"]').click();
+  /* ==== End Cypress Studio ==== */
+  /* ==== Generated with Cypress Studio ==== */
+  cy.get('.me-auto > [href="/"]').click();
   /* ==== End Cypress Studio ==== */
 });
 
