@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <main className="form-signin">
-        <Router basename="/MovieReviewerFrontEnd">
+        <Router basename="/MovieReviewerFrontend">
           <div>
             <Switch>
               <Route exact path="/">
